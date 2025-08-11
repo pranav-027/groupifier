@@ -2,7 +2,6 @@ import pdfMake from './pdfmake';
 import { flatMap, sortBy, sortByArray } from '../utils';
 import {
   activityCodeToName,
-  activityDurationString,
   parseActivityCode,
   roomsWithTimezoneAndGroups,
 } from '../activities';
@@ -74,13 +73,6 @@ const overviewForGroup = (wcif, room, timezone, groupActivity) => {
         text: activityCodeToName(groupActivity.activityCode),
         bold: true,
         fontSize: 14,
-      },
-      {
-        columns: [
-          `Time: ${activityDurationString(groupActivity, timezone)}`,
-          `Room: ${room.name}`,
-        ],
-        margin: [0, 5, 0, 5],
       },
       {
         fontSize: 8,
