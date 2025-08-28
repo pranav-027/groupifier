@@ -242,8 +242,6 @@ const sortedCompetitorsForRound = (wcif, roundId) => {
       '333ft',
       'pyram',
       'skewb',
-      'clock',
-      'sq1',
     ].includes(eventId)
   )
     return sortedByRanks;
